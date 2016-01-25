@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let flurryKey = Keys.FlurryKey
+        Flurry.startSession(flurryKey);// development
     }
 
     override func didReceiveMemoryWarning() {
