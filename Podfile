@@ -6,5 +6,6 @@ use_frameworks!
 target 'Comparendos Bogota' do
 pod ‘Flurry-iOS-SDK/FlurrySDK’
 pod 'Alamofire', '~> 3.0'
+pod 'Firebase', '>= 2.5.0'
 end
 

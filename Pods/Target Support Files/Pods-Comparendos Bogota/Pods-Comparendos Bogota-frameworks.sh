@@ -85,9 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Comparendos Bogota/Alamofire.framework"
+  install_framework "Pods-Comparendos Bogota/Firebase.framework"
   install_framework "Pods-Comparendos Bogota/Flurry_iOS_SDK.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Comparendos Bogota/Alamofire.framework"
+  install_framework "Pods-Comparendos Bogota/Firebase.framework"
   install_framework "Pods-Comparendos Bogota/Flurry_iOS_SDK.framework"
 fi
