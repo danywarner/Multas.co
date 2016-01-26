@@ -20,10 +20,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6s-zH-Qk0">
                                 <rect key="frame" x="215" y="96" width="171" height="30"/>
                                 <state key="normal" title="Valor comparendos 2016"/>
+                                <connections>
+                                    <segue destination="Qgf-El-xGa" kind="show" identifier="" id="xgi-b0-1VS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9A-LL-mu9">
                                 <rect key="frame" x="218" y="318" width="164" height="30"/>
                                 <state key="normal" title="Consultar comparendos"/>
+                                <connections>
+                                    <segue destination="TS3-iC-f9M" kind="show" id="sZc-kT-9Mm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCH-ee-W50">
                                 <rect key="frame" x="183" y="486" width="234" height="30"/>
@@ -43,6 +49,118 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Comparendo ListVC-->
+        <scene sceneID="f68-4X-dnM">
+            <objects>
+                <viewController id="Qgf-El-xGa" customClass="ComparendoListVC" customModule="Comparendos_Bogota" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nqt-fc-cBQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="kjY-jb-ru6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PI6-Pa-fwc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Yz-ME-u54">
+                                <rect key="frame" x="0.0" y="45" width="600" height="555"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ComparendoCell" id="emh-qq-nw7" customClass="ComparendoCell" customModule="Comparendos_Bogota" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="emh-qq-nw7" id="GRu-nN-inw">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comparendo 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="dom-Yo-DOc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="dom-Yo-DOc" secondAttribute="bottom" id="925-la-mV2"/>
+                                                <constraint firstAttribute="trailing" secondItem="dom-Yo-DOc" secondAttribute="trailing" id="Tzu-oL-DFh"/>
+                                                <constraint firstItem="dom-Yo-DOc" firstAttribute="leading" secondItem="GRu-nN-inw" secondAttribute="leading" id="oBd-SW-sxO"/>
+                                                <constraint firstItem="dom-Yo-DOc" firstAttribute="top" secondItem="GRu-nN-inw" secondAttribute="top" id="rkW-rK-7FS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descLabel" destination="dom-Yo-DOc" id="SuY-Nc-UDz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfH-pp-13R">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.41960784309999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9m2-zm-tcK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Yz-ME-u54" secondAttribute="trailing" id="6GL-eN-a08"/>
+                            <constraint firstItem="6Yz-ME-u54" firstAttribute="bottom" secondItem="kjY-jb-ru6" secondAttribute="top" id="FEw-L0-akk"/>
+                            <constraint firstItem="6Yz-ME-u54" firstAttribute="leading" secondItem="BfH-pp-13R" secondAttribute="leading" id="GWC-9d-gZY"/>
+                            <constraint firstItem="6Yz-ME-u54" firstAttribute="trailing" secondItem="BfH-pp-13R" secondAttribute="trailing" id="HNW-Na-zoB"/>
+                            <constraint firstAttribute="bottom" secondItem="BfH-pp-13R" secondAttribute="bottom" constant="555" id="Hkz-I8-TfB"/>
+                            <constraint firstItem="6Yz-ME-u54" firstAttribute="top" secondItem="BfH-pp-13R" secondAttribute="bottom" id="Q6S-b4-M9A"/>
+                            <constraint firstItem="6Yz-ME-u54" firstAttribute="leading" secondItem="PI6-Pa-fwc" secondAttribute="leading" id="Xc4-cW-PTj"/>
+                            <constraint firstItem="BfH-pp-13R" firstAttribute="top" secondItem="PI6-Pa-fwc" secondAttribute="top" id="kJ7-1f-oNJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Hkz-I8-TfB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="6Yz-ME-u54" id="kfj-0X-nDP"/>
+                        <segue destination="4Eh-Mm-iPE" kind="show" identifier="ComparendoDetailVC" id="JPr-JB-Tg0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qW-h8-64N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="253"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="q7a-3c-luc">
+            <objects>
+                <viewController id="4Eh-Mm-iPE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OMA-Qi-yYb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xxn-sU-tRm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XY7-RL-vPN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHg-hT-MgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785" y="253"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dF5-iv-ddO">
+            <objects>
+                <viewController id="TS3-iC-f9M" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Ij-xz-ofj"/>
+                        <viewControllerLayoutGuide type="bottom" id="D9B-Pq-OUC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fd8-Ii-FgH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.58452461850000004" green="0.63931596970000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6OS-W9-NQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="1028"/>
         </scene>
     </scenes>
 </document>

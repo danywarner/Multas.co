@@ -14,12 +14,12 @@ class ViewController: UIViewController {
 
     var SMDLV = 0
     var SMMLV = 0
-    var comparendos = [Comparendo]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let flurryKey = Keys.FlurryKey
-        Flurry.startSession(flurryKey);// development
+        Flurry.startSession(flurryKey);
         
         DataService.ds.REF_SALARIOS.observeEventType(.Value, withBlock: { snapshot in
             if let salariosDict = snapshot.value {
@@ -28,31 +28,9 @@ class ViewController: UIViewController {
             }
         })
         
-        DataService.ds.REF_COMPARENDOS.observeEventType(.Value, withBlock: { snapshot in
-            
-            self.comparendos = []
-            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
-                
-                for snap in snapshots {
-                    
-                    if let comparendoDict = snap.value as? Dictionary<String, AnyObject> {
-                        let key = snap.key
-                        let comparendo = Comparendo(code: key, dictionary: comparendoDict)
-                        self.comparendos.append(comparendo)
-                        
-                    }
-                }
-            }
-           // self.collection.reloadData()
-        })
-        
-        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
 
 }
