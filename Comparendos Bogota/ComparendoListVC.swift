@@ -191,8 +191,12 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        comparendosTemp = comparendosPorSeccion[indexPath.section]
         
+        if inSearchMode {
+            comparendosTemp = filteredArray[indexPath.section]
+        } else {
+            comparendosTemp = comparendosPorSeccion[indexPath.section]
+        }
         performSegueWithIdentifier("ComparendoDetailVC", sender: comparendosTemp[indexPath.row])
     }
     
