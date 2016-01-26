@@ -1,0 +1,656 @@
+{
+  "nombredesecciones" : {
+    "A" : "A. Infracción para conductores de vehículo no automotor o de tracción animal",
+    "B" : "B. Conductor y/o propietario de un vehículo automotor",
+    "C" : "C. Conductor y/o propietario de un vehículo automotor",
+    "D" : "D. Conductor y/o propietario de un vehículo automotor",
+    "E" : "E. Conductor y/o propietario de un vehículo automotor",
+    "F" : "F. Infracciones en que incurren los peatones y que dan lugar a la imposicion de 1 SMLDV",
+    "G" : "G. La siguiente infracciones seran sancionadas con la imposicion de comparendos educativos",
+    "H" : "H. Conductor y/o propietario de un vehículo automotor"
+  },
+  "salarios" : {
+    "SMDLV" : 22981,
+    "SMMLV" : 689455
+  },
+  "secciones" : [ {
+    "codigo" : "A",
+    "comparendos" : [ {
+      "codigo" : "A01",
+      "descripcion" : "No transitar por la derecha de la vía.",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A02",
+      "descripcion" : "Agarrarse de otro vehículo en circulación",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A03",
+      "descripcion" : "Transportar personas o cosas que disminuyan su visibilidad e incomoden la conducción.",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A04",
+      "descripcion" : "Transitar por andenes y demás lugares destinados al tránsito de peatones.",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A05",
+      "descripcion" : "No respetar las señales de tránsito.",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A06",
+      "descripcion" : "Transitar sin los dispositivos luminosos requeridos",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A07",
+      "descripcion" : "Transitar sin dispositivos que permitan la parada inmediata o con ellos, pero en estado defectuoso",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A08",
+      "descripcion" : "Transitar por zonas prohibidas.",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A09",
+      "descripcion" : "Adelantar entre dos (2) vehículos automotores que estén en sus respectivos carriles",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A10",
+      "descripcion" : "Conducir por la vía férrea o por zonas de protección y seguridad.",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A11",
+      "descripcion" : "Transitar por zonas restringidas o por vías de alta velocidad como autopistas y arterias, en este caso el vehículo automotor será inmovilizado. ",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "A12",
+      "descripcion" : "Prestar servicio público con este tipo de vehículos. Además, el vehículo será inmovilizado por primera vez por el término de 5 días, por segunda vez 20 días y por tercera vez 40 días",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 4
+    } ]
+  }, {
+    "codigo" : "B",
+    "comparendos" : [ {
+      "codigo" : "B01",
+      "descripcion" : "Conducir un vehículo sin llevar consigo la licencia de conducción.",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B02",
+      "descripcion" : "Conducir un vehículo con la licencia de conducción vencida.",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B03",
+      "descripcion" : "Sin placas, o sin el permiso vigente expedido por autoridad de tránsito",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B02",
+      "descripcion" : "Con placas adulteradas",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B05",
+      "descripcion" : "Con una sola placa, o sin el permiso vigente expedido por autoridad de tránsito",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B06",
+      "descripcion" : "Con placas falsas. En los anteriores casos los vehículos serán inmovilizados",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B07",
+      "descripcion" : "No informar a la autoridad de tránsito competente el cambio de motor o color de un vehículo. En ambos casos, el vehículo será inmovilizado.",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B08",
+      "descripcion" : "No pagar el peaje en los sitios establecidos",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B09",
+      "descripcion" : "Utilizar equipos de sonido a volúmenes que incomoden a los pasajeros de un vehículo de servicio público",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B10",
+      "descripcion" : "Conducir un vehículo con vidrios polarizados, entintados u oscurecidos, sin portar el permiso respectivo de acuerdo a la reglamentación existente sobre la materia",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B11",
+      "descripcion" : "Conducir un vehículo con propaganda, publicidad o adhesivos en sus vidrios que obstaculicen la visibilidad.",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B12",
+      "descripcion" : "No respetar las normas establecidas por la autoridad competente para el tránsito de cortejos fúnebres.",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B13",
+      "descripcion" : "No respetar las formaciones de tropas, la marcha de desfiles, procesiones, entierros, filas estudiantiles y las manifestaciones públicas y actividades deportivas, debidamente autorizadas por las autoridades de tránsito",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B14",
+      "descripcion" : "Remolcar otro vehículo violando lo dispuesto este Código",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B15",
+      "descripcion" : "Conducir un vehículo de servicio público que no lleve el aviso de tarifas oficiales en condiciones de fácil lectura para los pasajeros o poseer este aviso deteriorado o adulterado",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B16",
+      "descripcion" : "Permitir que en un vehículo de servicio público para transporte de pasajeros se lleven animales u objetos que incomoden a los pasajeros\"",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B17",
+      "descripcion" : "Abandonar un vehículo de servicio público con pasajeros",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B18",
+      "descripcion" : "Conducir un vehículo de transporte público individual de pasajeros sin cumplir con lo estipulado en el Código Nacional de Tránsito Terrestre",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B19",
+      "descripcion" : "Realizar el cargue o descargue de un vehículo en sitios y horas prohibidas por las autoridades competentes, de acuerdo con lo establecido en las normas correspondientes",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B20",
+      "descripcion" : "Transportar carne, pescado o alimentos fácilmente corruptibles, en vehículos que no cumplan las condiciones fijadas por el Ministerio de Transporte",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B21",
+      "descripcion" : "Lavar vehículos en vía pública, en ríos, en canales, en quebradas, etc",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B22",
+      "descripcion" : "Llevar niños menores de diez (10) años en el asiento delantero",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    }, {
+      "codigo" : "B23",
+      "descripcion" : "Utilizar radios, equipos de sonido o de amplificación a volúmenes que superen los decibeles máximos establecidos por las autoridades ambientales. De igual forma utilizar pantallas, proyectores de imagen o similares en la parte delantera de los vehículos mientras esté en movimiento",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 8
+    } ]
+  }, {
+    "codigo" : "C",
+    "comparendos" : [ {
+      "codigo" : "C01",
+      "descripcion" : "Presentar licencia de conducción adulterada o ajena lo cual dará lugar a la inmovilización del vehículo",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C02",
+      "descripcion" : "Estacionar un vehículo en sitios prohibidos",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C03",
+      "descripcion" : "Bloquear una calzada o intersección con un vehículo, salvo cuando el bloqueo obedezca a la ocurrencia de un accidente de tránsito",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C04",
+      "descripcion" : "Estacionar un vehículo sin tomar las debidas precauciones o sin colocar a la distancia señalada por este Código, las señales de peligro reglamentarias",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C05",
+      "descripcion" : "No reducir la velocidad según lo indicado por este Código, cuando transite por un cruce escolar en los horarios y días de funcionamiento de la institución educativa. Así mismo, cuando transite por cruces de hospitales o terminales de pasajeros",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C06",
+      "descripcion" : "No utilizar el cinturón de seguridad por parte de los ocupantes del vehículo",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C07",
+      "descripcion" : "Dejar de señalizar con las luces direccionales o mediante señales de mano y con la debida anticipación, la maniobra de giro o de cambio de carril",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C08",
+      "descripcion" : "Transitar sin los dispositivos luminosos requeridos o sin los elementos determinados en éste Código",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C09",
+      "descripcion" : "No respetar las señales de detención en el cruce de una línea férrea, o conducir por la vía férrea o por las zonas de protección y seguridad de ella",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C10",
+      "descripcion" : "Conducir un vehículo con una o varias puertas abiertas",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C11",
+      "descripcion" : "No portar el equipo de prevención y seguridad establecido en este Código o en la reglamentación correspondiente.",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C12",
+      "descripcion" : "Proveer de combustible un vehículo automotor con el motor encendido",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C13",
+      "descripcion" : "Conducir un vehículo automotor sin las adaptaciones pertinentes, cuando el conductor padece de limitación física",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C14",
+      "descripcion" : "*Transitar por sitios restringidos o en horas prohibidas por la autoridad competente. Además, el vehículo será inmovilizado",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C15",
+      "descripcion" : "Conducir un vehículo particular o de servicio público, excediendo la capacidad autorizada en la licencia de tránsito o tarjeta de operación",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C16",
+      "descripcion" : "Conducir un vehículo escolar sin el permiso respectivo o los distintivos reglamentarios. Además el vehículo será inmovilizado",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C17",
+      "descripcion" : "Circular con combinaciones de vehículos de dos (2) o más unidades remolcadas, sin autorización especial de autoridad competente",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C18",
+      "descripcion" : "Conducir un vehículo autorizado para prestar servicio público con el taxímetro dañado, con los sellos rotos o etiquetas adhesivas con calibración vencida o adulteradas o cuando se carezca de él, o cuando aún teniéndolo, no cumpla con las normas mínimas de calidad y seguridad exigidas por la autoridad competente o éste no esté en funcionamiento",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C19",
+      "descripcion" : "Dejar o recoger pasajeros en sitios distintos de los demarcados por las autoridades",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C20",
+      "descripcion" : "Conducir un vehículo de carga en que se transporten materiales de construcción o a granel sin las medidas de protección, higiene y seguridad ordenadas. Además el vehículo será inmovilizado",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C21",
+      "descripcion" : "No asegurar la carga para evitar que se caigan en la vía las cosas transportadas. Además, se inmovilizará el vehículo hasta tanto se remedie la situación",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C22",
+      "descripcion" : "Transportar carga de dimensiones superiores a las autorizadas sin cumplir con los requisitos exigidos. Además, el vehículo será inmovilizado hasta que se remedie dicha situación",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C23",
+      "descripcion" : "Impartir en vías públicas al público enseñanza práctica para conducir, sin estar autorizado para ello",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C24",
+      "descripcion" : "Conducir motocicleta sin observar las normas establecidas en el presente Código",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C25",
+      "descripcion" : "Transitar cuando hubiere más de un carril, por el carril izquierdo de la vía a velocidad que entorpezca el tránsito de los demás vehículos",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C26",
+      "descripcion" : "Transitar en vehículos de 3.5 o más toneladas por el carril izquierdo de la vía cuando hubiere más de un carril",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C27",
+      "descripcion" : "Conducir un vehículo cuya carga o pasajeros obstruyan la visibilidad del conductor hacia el frente, atrás o costados, o impidan el control sobre el sistema de dirección, frenos o seguridad. Además el vehículos será inmovilizado",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C28",
+      "descripcion" : "Hacer uso de dispositivos propios de vehículos de emergencia, por parte de conductores de otro tipo de vehículos",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C29",
+      "descripcion" : "Conducir un vehículo a velocidad superior a la máxima permitida",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C30",
+      "descripcion" : "No atender una señal de ceda el paso",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C31",
+      "descripcion" : "No acatar las señales o requerimientos impartidos por los agentes de tránsito",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C32",
+      "descripcion" : "No respetar el paso de peatones que cruzan una vía en sitio permitido para ellos o no darles la prelación en las franjas para ello establecidas",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C33",
+      "descripcion" : "Poner un vehículo en marcha sin las precauciones para evitar choques",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C34",
+      "descripcion" : "Reparar un vehículo en las vías públicas, parque o acera, o hacerlo en caso de emergencia, sin atender el procedimiento señalado en este Código",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C35",
+      "descripcion" : "No realizar la revisión técnico-mecánica en el plazo legal establecido o cuando el vehículo no se encuentre en adecuadas condiciones técnico-mecánicas o de emisiones contaminantes, aún cuando porte los certificados correspondientes. Además el vehículo será inmovilizado",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C36",
+      "descripcion" : "Transportar carga en contenedores sin los dispositivos especiales de sujeción. El vehículo será inmovilizado",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C37",
+      "descripcion" : "Transportar pasajeros en el platón de una camioneta picó o en la plataforma de un vehículo de carga, trátese de furgón o plataforma de estacas",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C38",
+      "descripcion" : "Usar sistemas móviles de comunicación o teléfonos instalados en los vehículos al momento de conducir, exceptuando si éstos son utilizados con accesorios o equipos auxiliares que permitan tener las manos libres",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C39",
+      "descripcion" : "Vulnerar las reglas de estacionamiento contenidas en el artículo 77 de este Código",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    }, {
+      "codigo" : "C40",
+      "descripcion" : "Los conductores con movilidad normal que estacionen sus vehìculos en lugares pùblicos de etacionamiento especìficamente demarcados con el sìmbolo internacional de accesibilidad para los automotores que transporten o sean conducidos por personas con movilidad reducida o vehìculos para centros de educaciòn especial o de rehabilitaciòn",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 15
+    } ]
+  }, {
+    "codigo" : "D",
+    "comparendos" : [ {
+      "codigo" : "D01",
+      "descripcion" : "Guiar un vehículo sin haber obtenido la licencia de conducción correspondiente. Además, el vehículo será inmovilizado en el lugar de los hechos, hasta que éste sea retirado por una persona autorizada por el infractor con licencia de conducción",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D02",
+      "descripcion" : "Conducir sin portar los seguros ordenados por la ley. Además, el vehículo será inmovilizado",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D03",
+      "descripcion" : "Transitar en sentido contrario al estipulado para la vía, calzada o carril. En el caso de motocicletas se procederá a su inmovilización hasta tanto no se pague el valor de la multa o la autoridad competente decida sobre su imposición en los términos de los artículos 135 y 136 del Código Nacional de Tránsito",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D04",
+      "descripcion" : "No detenerse ante una luz roja o amarilla de semáforo, una señal de “PARE” o un semáforo intermitente en rojo. En el caso de motocicletas se procederá a su inmovilización hasta tanto no se pague el valor de la multa o la autoridad competente decida sobre su imposición en los términos de los artículos 135 y 136 del Código Nacional de Tránsito",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D05",
+      "descripcion" : "Conducir un vehículo sobre aceras, plazas, vías peatonales, separadores, bermas, demarcaciones de canalización, zonas verdes o vías especiales para vehículos no motorizados. En el caso de motocicletas se procederá a su inmovilización hasta tanto no se pague el valor de la multa o la autoridad competente decida sobre su imposición en los términos de los artículos 135 y 136 del Código Nacional de Tránsito",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D06",
+      "descripcion" : "Adelantar a otro vehículo en berma, túnel, puente, curva, pasos a nivel y cruces no regulados o al aproximarse a la cima de una cuesta o donde la señal de tránsito correspondiente lo indique.En el caso de motocicletas se procederá a su inmovilización hasta tanto no se pague el valor de la multa o la autoridad competente decida sobre su imposición en los términos de los artículos 135 y 136 del Código Nacional de Tránsito",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D07",
+      "descripcion" : "Conducir realizando maniobras altamente peligrosas e irresponsables que pongan en peligro a las personas o las cosas.En el caso de motocicletas se procederá a su inmovilización hasta tanto no se pague el valor de la multa o la autoridad competente decida sobre su imposición en los términos de los artículos 135 y 136 del Código Nacional de Tránsito",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D08",
+      "descripcion" : "Conducir un vehículo sin luces o sin los dispositivos luminosos de posición, direccionales o de freno, o con alguna de ellas dañada, en las horas o circunstancias en que lo exige este código. Además, el vehículo será inmovilizado, cuando no le funcionen dos (2) o más de estas luces",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D09",
+      "descripcion" : "No permitir el paso de los vehículos de emergencia",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D10",
+      "descripcion" : "Conducir un vehículo para transporte escolar con exceso de velocidad",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 4
+    }, {
+      "codigo" : "D11",
+      "descripcion" : "Permitir el servicio público de pasajeros que no tenga las salidas de emergencia exigidas. En este caso, la multa se impondrá solidariamente a la empresa a la cual esté afiliado y al propietario. Si se tratare de vehículo particular, se impondrá la sanción solidariamente al propietario",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D12",
+      "descripcion" : "Conducir un vehículo que, sin la debida autorización, se destine a un servicio diferente de aquel para el cual tiene licencia de tránsito. Además, el vehículo será inmovilizado por primera vez, por el término de cinco días, por segunda vez veinte días y por tercera vez cuarenta días",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D13",
+      "descripcion" : "En caso de transportar carga con peso superior al autorizado el vehículo será inmovilizado y el exceso deberá ser transbordado",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D14",
+      "descripcion" : "*Las autoridades de tránsito ordenarán la inmovilización inmediata de los vehículos que usen para su movilización combustibles no regulados como gas propano u otros que pongan en peligro la vida de los usuarios o de los peatones",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D15",
+      "descripcion" : "Cambio del recorrido o trazado de la ruta para vehículo de servicio de transporte público de pasajeros, autorizado por el organismo de tránsito correspondiente. En este caso, la multa se impondrá solidariamente a la empresa a la cual esté afiliado el vehículo y al propietario. Además el vehículo será inmovilizado salvo casos de fuerza mayor que sean debidamente autorizados por el agente de tránsito",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D16",
+      "descripcion" : "Arrojar residuos sólidos al espacio público desde un vehìculo automotor o de tracciòn animal o humana, estacionado o en movimiento",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 30
+    }, {
+      "codigo" : "D17",
+      "descripcion" : "Cuando se detecte o advierta una infracciòn a las normas de emisiòn contaminantes o de generaciòn de ruido por vehìculos automotores",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 30
+    } ]
+  }, {
+    "codigo" : "E",
+    "comparendos" : [ {
+      "codigo" : "E01",
+      "descripcion" : "Proveer combustible de servicio público con pasajeros a bordo",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 45
+    }, {
+      "codigo" : "E02",
+      "descripcion" : "Negarse a prestar el servicio público sin causa justificada, siempre que dicha negativa cause alteración del orden público",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 45
+    }, {
+      "codigo" : "E03",
+      "descripcion" : "Transportar en el mismo vehículo y al mismo tiempo personas y sustancias peligrosas como explosivos, tóxicos, radioactivos, combustibles no autorizados, etc. En estos casos se suspenderá la licencia por un (1) y por dos (2) años cada vez que reincida. El vehículo será inmovilizado ",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 45
+    }, {
+      "codigo" : "F",
+      "descripcion" : "*ANTERIOR E03. Conducir en estado de embriaguez, o bajo los efectos de sustancias alucinógenas, se entenderá lo establecido en el atículo 152 de este Código. Si se trata de conductor de vehículos de servicio público, de transporte escolar o de instructor de conducción, la multa pecuniaria y el período de suspensión de la licencia se duplicará. En todos los casos de embriaguez, el vehículo será inmovilizado y el estado de embriaguez o alcoholemia se determinará mediante una prueba que no cause lesión, la cual será determinada por el Instituto de Medicina Legal y Ciencias Forenses",
+      "inmovilizable" : 1,
+      "valorSMDLV" : 0
+    } ]
+  }, {
+    "codigo" : "F",
+    "comparendos" : [ {
+      "codigo" : "F01",
+      "descripcion" : "Invadir la zona destinada al tránsito de vehículos, ni transitar en ésta en patines, monopatines, patinetas o similares",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F02",
+      "descripcion" : "Llevar, sin las debidas precauciones, elementos que puedan obstaculizar o afectar el tránsito",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F03",
+      "descripcion" : "Cruzar por sitios no permitidos o transitar sobre el guardavías del ferrocarril",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F04",
+      "descripcion" : "Colocarse delante o detrás de un vehículo que tenga el motor encendido",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F05",
+      "descripcion" : "Remolcarse de vehículos en movimiento",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F06",
+      "descripcion" : "Actuar de manera que ponga en peligro su integridad física",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F07",
+      "descripcion" : "Cruzar la vía atravesando el tráfico vehicular en lugares en donde existen pasos peatonales",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F08",
+      "descripcion" : "Ocupar la zona de seguridad y protección de la vía férrea, la cual se establece a una distancia no menor de doce (12) metros a lado y lado del eje de la vía férrea",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F09",
+      "descripcion" : "Subirse o bajarse de los vehículos, estando éstos en movimiento, cualquiera que sea la operación o maniobra que estén realizando",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F10",
+      "descripcion" : "Transitar por los túneles, puentes y viaductos de las vías férreas",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F11",
+      "descripcion" : "En relación con el SUMP, éstos no deben ocupar la zona de seguridad y corredores de tránsito de los vehículos del SUMP, fuera de los lugares expresamente autorizados y habilitados para ello",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    }, {
+      "codigo" : "F12",
+      "descripcion" : "Dentro del perímetro urbano, el cruce debe hacerse sólo para las zonas autorizadas como los puentes peatonales, los pasos peatonales y las bocacalles",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 1
+    } ]
+  }, {
+    "codigo" : "G",
+    "comparendos" : [ {
+      "codigo" : "G01",
+      "descripcion" : "El pasajero que sea sorprendido fumando en un vehículo de servicio público, será obligado a abandonar el automotor y deberá asistir a un curso de seguridad vial",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 0
+    }, {
+      "codigo" : "G02",
+      "descripcion" : "Los peatones y ciclistas que no cumplan con las disposiciones de este código, serán amonestadas por la autoridad de tránsito competente y deberá asistir a un curso formativo dictado por las autoridades de tránsito. La inasistencia al curso será sancionada con arresto de uno (1) a seis (6) días",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 0
+    } ]
+  }, {
+    "codigo" : "H",
+    "comparendos" : [ {
+      "codigo" : "H01",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H02",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H03",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H04",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H05",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H06",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H07",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H08",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H09",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H10",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H11",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H12",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    }, {
+      "codigo" : "H13",
+      "descripcion" : "a",
+      "inmovilizable" : 0,
+      "valorSMDLV" : 5
+    } ]
+  } ]
+}
