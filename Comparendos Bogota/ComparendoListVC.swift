@@ -18,11 +18,9 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     var inSearchMode = false
     var secciones = [String]()
-    var comparendosTipoA = [Comparendo]()
-    var comparendosTipoB = [Comparendo]()
     var comparendosTemp = [Comparendo]()
     var comparendosPorSeccion = [[Comparendo]]()
-    var filteredArray = [Comparendo]()
+    var filteredArray = [[Comparendo]]()
     var SMDLV = 0
     var SMMLV = 0
     
@@ -101,8 +99,12 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         } else {
             
             inSearchMode = true
+            filteredArray = []
             let lower = searchBar.text!.lowercaseString
-            filteredArray = comparendosTipoA.filter({$0.description.lowercaseString.rangeOfString(lower, options: NSStringCompareOptions.DiacriticInsensitiveSearch, range: nil, locale: nil) != nil})
+            for var k = 0 ; k < comparendosPorSeccion.count ; k++ {
+                filteredArray.append(comparendosPorSeccion[k].filter({$0.description.lowercaseString.rangeOfString(lower, options: NSStringCompareOptions.DiacriticInsensitiveSearch, range: nil, locale: nil) != nil}))
+            }
+            
         }
         self.tableView.reloadData()
         
@@ -138,49 +140,10 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         return title
     }
-    
-//    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//        
-//        if let view = view as? UITableViewHeaderFooterView {
-//            view.backgroundView?.backgroundColor = UIColor.blueColor()
-//            view.textLabel!.backgroundColor = UIColor.grayColor()
-//            view.textLabel!.textColor = UIColor.whiteColor()
-//            view.textLabel!.font = UIFont.boldSystemFontOfSize(15)
-//        }
-//        
-//    }
+
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60.0
-    }
-    
-    func setHeaderConstraints(view: UIView) {
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        let leadingConstraint = NSLayoutConstraint(item: view, attribute: .Leading, relatedBy: .Equal, toItem: tableView, attribute: .Leading, multiplier: 1, constant: 0)
-        
-        let trailingConstraint = NSLayoutConstraint(item: view, attribute: .Trailing, relatedBy: .Equal, toItem: tableView, attribute: .Trailing, multiplier: 1, constant: 0)
-        
-        
-        view.addConstraints([leadingConstraint,trailingConstraint])
-    }
-    
-    func setTitleConstraints(title: UILabel,view: UIView) {
-        
-        title.textColor = UIColor.redColor()
-        title.font = UIFont(name: "HelveticaNeue", size: CGFloat(12))
-        
-        title.translatesAutoresizingMaskIntoConstraints = false
-        
-        let leadingConstraint = NSLayoutConstraint(item: title, attribute: .Leading, relatedBy: .Equal, toItem: view, attribute: .Leading, multiplier: 1, constant: 5)
-        
-        let trailingConstraint = NSLayoutConstraint(item: title, attribute: .Trailing, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 5)
-        
-        
-        
-        view.addConstraints([leadingConstraint,trailingConstraint])
-        
+        return 50.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -188,8 +151,8 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         let comparendo: Comparendo!
         
         if inSearchMode {
-            comparendosTemp = comparendosPorSeccion[indexPath.section]
-            comparendo = filteredArray[indexPath.row]
+            comparendosTemp = filteredArray[indexPath.section]
+            comparendo = comparendosTemp[indexPath.row]
         } else {
             comparendosTemp = comparendosPorSeccion[indexPath.section]
             comparendo = comparendosTemp[indexPath.row]
@@ -215,7 +178,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if inSearchMode {
-            return filteredArray.count
+            return filteredArray[section].count
         }
         if comparendosPorSeccion.count > 0 {
             return comparendosPorSeccion[section].count
