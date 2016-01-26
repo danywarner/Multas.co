@@ -106,6 +106,10 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         
     }
     
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+    }
+    
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
             searchBar.showsCancelButton = false
