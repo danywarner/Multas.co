@@ -91,13 +91,28 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         view.endEditing(true)
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        view.endEditing(true)
+        searchBar.showsCancelButton = false
+        if searchBar.text != "" {
+            searchBar.text = ""
+        }
+        inSearchMode = false
+        tableView.reloadData()
         
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
+            searchBar.showsCancelButton = false
             inSearchMode = false
             view.endEditing(true)
         } else {
-            
+            searchBar.showsCancelButton = true
             inSearchMode = true
             filteredArray = []
             let lower = searchBar.text!.lowercaseString
