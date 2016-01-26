@@ -87,9 +87,7 @@
 				657C40641C56EBB700C8A3DF /* View */,
 				657C40571C56B57500C8A3DF /* Controller */,
 				657C40451C56B55500C8A3DF /* AppDelegate.swift */,
-				657C40491C56B55500C8A3DF /* Main.storyboard */,
 				657C404C1C56B55500C8A3DF /* Assets.xcassets */,
-				657C404E1C56B55500C8A3DF /* LaunchScreen.storyboard */,
 				657C40511C56B55500C8A3DF /* Info.plist */,
 			);
 			path = "Comparendos Bogota";
@@ -125,6 +123,8 @@
 		657C40641C56EBB700C8A3DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				657C404E1C56B55500C8A3DF /* LaunchScreen.storyboard */,
+				657C40491C56B55500C8A3DF /* Main.storyboard */,
 				657C40651C56EC0400C8A3DF /* ComparendoCell.swift */,
 			);
 			name = View;

@@ -11,7 +11,23 @@ import UIKit
 
 class ComparendoDetailVC: UIViewController {
 
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var codeLabel: UILabel!
+    @IBOutlet weak var totalPriceLabel: UILabel!
+    @IBOutlet weak var fiftyPercentLabel: UILabel!
+    @IBOutlet weak var seventyfivePercentLabel: UILabel!
+    @IBOutlet weak var smdlvValue: UILabel!
+    @IBOutlet weak var smdlvInCash: UILabel!
+    
+    
+    
+    
+    
     private var _comparendo: Comparendo!
+    var SMMLV = 0
+    var SMDLV = 0
+    var comparendoTotal = 0.0
     
     var comparendo: Comparendo {
         get {
@@ -25,5 +41,24 @@ class ComparendoDetailVC: UIViewController {
     override func viewDidLoad() {
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        comparendoTotal = Double(comparendo.SMDLVValue!*self.SMDLV)
+        codeLabel.text = comparendo.code
+        descriptionLabel.text = comparendo.description
+        totalPriceLabel.text = "$\(comparendoTotal)"
+        fiftyPercentLabel.text = "$\(comparendoTotal/2)"
+        seventyfivePercentLabel.text = "$\(comparendoTotal*0.75)"
+        smdlvValue.text = "\(comparendo.SMDLVValue)"
+        smdlvInCash.text = "$\(self.SMDLV)"
+    }
 
+    @IBAction func backButtonPressed(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    
 }

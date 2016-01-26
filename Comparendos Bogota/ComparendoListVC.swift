@@ -16,6 +16,8 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var tableView: UITableView!
     
     var comparendos = [Comparendo]()
+    var SMDLV = 0
+    var SMMLV = 0
     
     override func viewDidLoad() {
         
@@ -40,6 +42,13 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
             }
              self.tableView.reloadData()
         })
+        
+        DataService.ds.REF_SALARIOS.observeEventType(.Value, withBlock: { snapshot in
+            if let salariosDict = snapshot.value {
+                self.SMDLV = salariosDict["SMDLV"] as! Int
+                self.SMMLV = salariosDict["SMMLV"] as! Int
+            }
+        })
 
     }
     
@@ -61,7 +70,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        performSegueWithIdentifier("ComparendoDetailVC", sender: comparendos[indexPath.row])
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,7 +78,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 80
+        return 70
     }
  
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -77,8 +86,16 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
             if let detailVC = segue.destinationViewController as? ComparendoDetailVC {
                 if let comparendo = sender as? Comparendo {
                     detailVC.comparendo = comparendo
+                    detailVC.SMDLV = self.SMDLV
+                    detailVC.SMMLV = self.SMMLV
                 }
             }
         }
+    }
+    
+    @IBAction func backButtonPressed(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
 }

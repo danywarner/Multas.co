@@ -67,7 +67,7 @@ class Comparendo {
         _SMDLVValue = 0
         _towedAway = false
         
-         print(dictionary.debugDescription)
+         //print(dictionary.debugDescription)
         if let code = dictionary["codigo"] as? String {
             
                 _code = code
