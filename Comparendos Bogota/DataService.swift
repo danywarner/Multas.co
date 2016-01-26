@@ -17,7 +17,8 @@ class DataService {
     static let ds = DataService()
     
     private var _REF_BASE = Firebase(url: "\(URL_BASE)")
-    private var _REF_COMPARENDOS = Firebase(url: "\(URL_BASE)/comparendos")
+    private var _REF_SECCIONES = Firebase(url: "\(URL_BASE)/secciones")
+    private var _REF_NOMBRE_SECCIONES = Firebase(url: "\(URL_BASE)/nombredesecciones")
     private var _REF_SALARIOS = Firebase(url: "\(URL_BASE)/salarios")
     
     
@@ -25,8 +26,12 @@ class DataService {
         return _REF_BASE
     }
     
-    var REF_COMPARENDOS: Firebase {
-        return _REF_COMPARENDOS
+    var REF_SECCIONES: Firebase {
+        return _REF_SECCIONES
+    }
+    
+    var REF_NOMBRE_SECCIONES: Firebase {
+        return _REF_NOMBRE_SECCIONES
     }
     
     var REF_SALARIOS: Firebase {
