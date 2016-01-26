@@ -131,7 +131,8 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         title.text = sectionTitle
         title.textColor = UIColor(red: 0.0, green: 0.54, blue: 0.0, alpha: 0.8)
-        title.backgroundColor = UIColor.lightGrayColor()
+        title.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        
         title.font = UIFont.boldSystemFontOfSize(15)
         title.numberOfLines = 0
         title.textAlignment = NSTextAlignment.Center
@@ -143,7 +144,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
 
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50.0
+        return 37.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -165,6 +166,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         } else {
             let cell = ComparendoCell()
             cell.configureCell(comparendo)
+            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
             return cell
         }
     }
