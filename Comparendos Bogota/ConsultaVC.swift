@@ -117,8 +117,11 @@ class ConsultaVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             let result = response.result
             if result.value.debugDescription.lowercaseString.rangeOfString("no se encontraron registros de comparendos") != nil{
                 print("no hay!")
+                self.performSegueWithIdentifier("SinComparendosVC", sender: "")
             } else {
                 print("tiene comparendos")
+                self.performSegueWithIdentifier("ConComparendosVC", sender: "")
+
             }
            // print(result.value.debugDescription)
         }

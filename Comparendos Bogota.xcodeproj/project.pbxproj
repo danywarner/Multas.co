@@ -20,6 +20,8 @@
 		657C40631C56E10A00C8A3DF /* ComparendoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C40621C56E10A00C8A3DF /* ComparendoDetailVC.swift */; };
 		657C40661C56EC0400C8A3DF /* ComparendoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C40651C56EC0400C8A3DF /* ComparendoCell.swift */; };
 		6594A2581C59178F00B209EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6594A25A1C59178F00B209EB /* InfoPlist.strings */; };
+		6594A25D1C59608600B209EB /* SinComparendosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594A25C1C59608600B209EB /* SinComparendosVC.swift */; };
+		6594A25F1C59609600B209EB /* ConComparendosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594A25E1C59609600B209EB /* ConComparendosVC.swift */; };
 		65CB650B1C57ACF600FF165D /* ConsultaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB650A1C57ACF600FF165D /* ConsultaVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		657C40651C56EC0400C8A3DF /* ComparendoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparendoCell.swift; sourceTree = "<group>"; };
 		6594A2591C59178F00B209EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6594A25B1C5917A900B209EB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6594A25C1C59608600B209EB /* SinComparendosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinComparendosVC.swift; sourceTree = "<group>"; };
+		6594A25E1C59609600B209EB /* ConComparendosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConComparendosVC.swift; sourceTree = "<group>"; };
 		65CB650A1C57ACF600FF165D /* ConsultaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultaVC.swift; sourceTree = "<group>"; };
 		90D18EE2DCBC561F7B2B9DCE /* Pods_Comparendos_Bogota.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comparendos_Bogota.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97332FC42A8F1B4957861A35 /* Pods-Comparendos Bogota.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comparendos Bogota.release.xcconfig"; path = "Pods/Target Support Files/Pods-Comparendos Bogota/Pods-Comparendos Bogota.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				657C40601C56DFFB00C8A3DF /* ComparendoListVC.swift */,
 				657C40621C56E10A00C8A3DF /* ComparendoDetailVC.swift */,
 				65CB650A1C57ACF600FF165D /* ConsultaVC.swift */,
+				6594A25C1C59608600B209EB /* SinComparendosVC.swift */,
+				6594A25E1C59609600B209EB /* ConComparendosVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -272,11 +278,13 @@
 				657C40631C56E10A00C8A3DF /* ComparendoDetailVC.swift in Sources */,
 				657C40611C56DFFB00C8A3DF /* ComparendoListVC.swift in Sources */,
 				657C40481C56B55500C8A3DF /* ViewController.swift in Sources */,
+				6594A25D1C59608600B209EB /* SinComparendosVC.swift in Sources */,
 				657C405A1C56B66000C8A3DF /* Keys.swift in Sources */,
 				65CB650B1C57ACF600FF165D /* ConsultaVC.swift in Sources */,
 				657C40461C56B55500C8A3DF /* AppDelegate.swift in Sources */,
 				657C405C1C56B9AD00C8A3DF /* DataService.swift in Sources */,
 				657C405F1C56C08D00C8A3DF /* Comparendo.swift in Sources */,
+				6594A25F1C59609600B209EB /* ConComparendosVC.swift in Sources */,
 				657C40661C56EC0400C8A3DF /* ComparendoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
