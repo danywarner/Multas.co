@@ -19,6 +19,7 @@
 		657C40611C56DFFB00C8A3DF /* ComparendoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C40601C56DFFB00C8A3DF /* ComparendoListVC.swift */; };
 		657C40631C56E10A00C8A3DF /* ComparendoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C40621C56E10A00C8A3DF /* ComparendoDetailVC.swift */; };
 		657C40661C56EC0400C8A3DF /* ComparendoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657C40651C56EC0400C8A3DF /* ComparendoCell.swift */; };
+		6594A2581C59178F00B209EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6594A25A1C59178F00B209EB /* InfoPlist.strings */; };
 		65CB650B1C57ACF600FF165D /* ConsultaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB650A1C57ACF600FF165D /* ConsultaVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		657C40601C56DFFB00C8A3DF /* ComparendoListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparendoListVC.swift; sourceTree = "<group>"; };
 		657C40621C56E10A00C8A3DF /* ComparendoDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparendoDetailVC.swift; sourceTree = "<group>"; };
 		657C40651C56EC0400C8A3DF /* ComparendoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparendoCell.swift; sourceTree = "<group>"; };
+		6594A2591C59178F00B209EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6594A25B1C5917A900B209EB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65CB650A1C57ACF600FF165D /* ConsultaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultaVC.swift; sourceTree = "<group>"; };
 		90D18EE2DCBC561F7B2B9DCE /* Pods_Comparendos_Bogota.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comparendos_Bogota.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97332FC42A8F1B4957861A35 /* Pods-Comparendos Bogota.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comparendos Bogota.release.xcconfig"; path = "Pods/Target Support Files/Pods-Comparendos Bogota/Pods-Comparendos Bogota.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 				657C40451C56B55500C8A3DF /* AppDelegate.swift */,
 				657C404C1C56B55500C8A3DF /* Assets.xcassets */,
 				657C40511C56B55500C8A3DF /* Info.plist */,
+				6594A25A1C59178F00B209EB /* InfoPlist.strings */,
 			);
 			path = "Comparendos Bogota";
 			sourceTree = "<group>";
@@ -186,6 +190,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 657C40391C56B55500C8A3DF;
 			productRefGroup = 657C40431C56B55500C8A3DF /* Products */;
@@ -203,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				657C40501C56B55500C8A3DF /* LaunchScreen.storyboard in Resources */,
+				6594A2581C59178F00B209EB /* InfoPlist.strings in Resources */,
 				657C404D1C56B55500C8A3DF /* Assets.xcassets in Resources */,
 				657C404B1C56B55500C8A3DF /* Main.storyboard in Resources */,
 			);
@@ -292,6 +298,15 @@
 				657C404F1C56B55500C8A3DF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6594A25A1C59178F00B209EB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6594A2591C59178F00B209EB /* en */,
+				6594A25B1C5917A900B209EB /* es */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
