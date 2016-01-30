@@ -116,6 +116,11 @@ class ConsultaVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         Alamofire.request(.GET, url).responseString { (response) -> Void in
             let result = response.result
             if result.value.debugDescription.lowercaseString.rangeOfString("no se encontraron registros de comparendos") != nil{
+                
+                let originalString = result.value.debugDescription
+              //  let vigenteIndex = originalString.rangeOfString(<#T##aString: String##String#>)
+                
+                
                 print("no hay!")
                 self.performSegueWithIdentifier("SinComparendosVC", sender: "")
             } else {
