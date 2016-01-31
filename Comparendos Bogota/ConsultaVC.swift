@@ -35,6 +35,17 @@ class ConsultaVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         case carnetDiplomatico = 8
     }
     
+    private var _estado: String!
+    private var _numero: String!
+    private var _placa: String!
+    private var _fecha: String!
+    private var _saldo: String!
+    private var _intereses: String!
+    private var _saldoMasIntereses: String!
+    private var _descuentoLey1450: String!
+    
+    var newString = NSString()
+    
 //    var url1 = "http://consultas.transitobogota.gov.co:8083/consultas_generales/buscar_comparendos.php?datos_enviados=S&tipo_documento=1&numero_identificacion=1014192693&placa_veh=&pagina_actual=1&tipo_busqueda=BC&existe_financiacion_finan=0&existe_financiacion_acpag=0"
 //    
     override func viewDidLoad() {
@@ -116,20 +127,94 @@ class ConsultaVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         Alamofire.request(.GET, url).responseString { (response) -> Void in
             let result = response.result
             if result.value.debugDescription.lowercaseString.rangeOfString("no se encontraron registros de comparendos") != nil{
-                
-                let originalString = result.value.debugDescription
-              //  let vigenteIndex = originalString.rangeOfString(<#T##aString: String##String#>)
-                
-                
                 print("no hay!")
                 self.performSegueWithIdentifier("SinComparendosVC", sender: "")
             } else {
-                print("tiene comparendos")
-                self.performSegueWithIdentifier("ConComparendosVC", sender: "")
+                
+                let originalString = result.value.debugDescription as NSString
+                let range = originalString.rangeOfString("VIGENTE")
+                let i = range.location
+                let newRange = NSRange(location: i, length: originalString.length-i)
+                self.newString = originalString.substringWithRange(newRange) as NSString
+                
+                //print(newString)
+                
+                let rangeF = self.newString.rangeOfString("a href=")
+                let s2Range = NSRange(location: 0, length: rangeF.location)
+                self.newString = self.newString.substringWithRange(s2Range)
+                self.newString = self.cutString(self.newString)
+                
+                print(self.newString)
+                
+                self._estado = "VIGENTE"
+                
+                self.newString = self.cutString(self.newString)
+                self._numero = self.getNextValue(self.newString)
+            
+                if self.placaVeh != "placa_veh=" {
+                    self.getNext()
+                }
+                
+                self._placa = self.getNext()
+                
+                self._fecha = self.getNext()
+                
+                self._saldo = self.getNext()
+                
+                self._intereses = self.getNext()
+                
+                self._saldoMasIntereses = self.getNext()
+                
+                self._descuentoLey1450 = self.getNext()
+                
+                let comparendoExistente = ComparendoExistente(estado: self._estado, numero: self._numero, placa: self._placa, fecha: self._fecha, saldo: self._saldo, intereses: self._intereses, saldoMasIntereses: self._saldoMasIntereses, descuentoLey1450: self._descuentoLey1450)
+                
+                self.performSegueWithIdentifier("ConComparendosVC", sender: comparendoExistente)
 
             }
            // print(result.value.debugDescription)
         }
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ConComparendosVC" {
+            if let conComparendosVC = segue.destinationViewController as? ConComparendosVC {
+                if let comparendoExistente = sender as? ComparendoExistente {
+                    conComparendosVC.comparendoExistente = comparendoExistente
+                   
+                }
+            }
+        }
+    }
+    
+    func getNext() -> String {
+        self.newString = self.cutString2(self.newString)
+        self.newString = self.cutString(self.newString)
+        let temp1String = self.getNextValue(self.newString)
+        return temp1String
+    }
+    
+    func cutString2(newString: NSString) -> String {
+        let range1 = newString.rangeOfString("\\\">&nbsp;")
+        let range3 = NSRange(location: (range1.location + 9), length: newString.length - (range1.location + 9))
+        return newString.substringWithRange(range3)
+    }
+    
+    func getNextValue(newString: NSString) -> String {
+        let range1 = newString.rangeOfString("\\\">&nbsp;")
+        let range2 = newString.rangeOfString("&nbsp;</td>")
+        let firstRange = NSRange(location: (range1.location + 9), length: (range2.location - range1.location - 9))
+        let temp1String = newString.substringWithRange(firstRange)
+        return temp1String
+
+    }
+    
+    func cutString(newString: NSString) -> String {
+        let rangetp = newString.rangeOfString("tdtablapaginada1")
+        let s3range = NSRange(location: rangetp.location, length: newString.length - rangetp.location)
+        let returnString = newString.substringWithRange(s3range)
+        return returnString
         
     }
     

@@ -19,6 +19,7 @@ class ComparendoDetailVC: UIViewController {
     @IBOutlet weak var seventyfivePercentLabel: UILabel!
     @IBOutlet weak var smdlvValue: UILabel!
     @IBOutlet weak var smdlvInCash: UILabel!
+    @IBOutlet weak var towedAwayLbl: UILabel!
     
     
     
@@ -52,6 +53,13 @@ class ComparendoDetailVC: UIViewController {
         seventyfivePercentLabel.text = "$\(comparendoTotal*0.75)"
         smdlvValue.text = "\(comparendo.SMDLVValue)"
         smdlvInCash.text = "$\(self.SMDLV)"
+        
+        if comparendo.towedAway == false {
+            towedAwayLbl.text = "No"
+        } else {
+            towedAwayLbl.text = "Sí"
+        }
+        
     }
 
     @IBAction func backButtonPressed(sender: AnyObject) {
