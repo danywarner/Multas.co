@@ -24,7 +24,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     var SMDLV = 0
     var SMMLV = 0
     var deviceHasOldDataVersion = true
-    
+    private var transitionManager = TransitionManager()
     override func viewDidLoad() {
         
         tableView.delegate = self
@@ -44,7 +44,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         
     }
     
-    func loadData() {print("reading")
+    func loadData() {
         if let loadedArray = NSUserDefaults.standardUserDefaults().objectForKey("comparendos") as? NSData {
             
             if let comparendosArrayofArrays = NSKeyedUnarchiver.unarchiveObjectWithData(loadedArray) as? [[Comparendo]]{
@@ -68,7 +68,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         }
     }
     
-    func storeData() {print("storing")
+    func storeData() {
         let comparendosAsData = NSKeyedArchiver.archivedDataWithRootObject(self.comparendosPorSeccion)
     
         NSUserDefaults.standardUserDefaults().setObject(comparendosAsData, forKey: "comparendos")
@@ -106,7 +106,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     
-    func downloadData() { print("downloading")
+    func downloadData() { 
         
         
         DataService.ds.REF_SECCIONES.observeEventType(.Value, withBlock: { snapshot in
@@ -284,6 +284,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
                     detailVC.SMDLV = self.SMDLV
                     detailVC.SMMLV = self.SMMLV
                 }
+               detailVC.transitioningDelegate = self.transitionManager
             }
         }
     }

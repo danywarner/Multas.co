@@ -14,7 +14,7 @@ class ConsultaVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var DocPicker: UIPickerView!
     @IBOutlet weak var textField: UITextField!
     typealias DownloadComplete = () -> ()
-    
+    private var transitionManager = TransitionManager()
     var baseString = "http://consultas.transitobogota.gov.co:8083/consultas_generales/buscar_comparendos.php?"
     var datosEnviados = "datos_enviados=S"
     var tipoDocumento = "tipo_documento="
@@ -54,7 +54,7 @@ class ConsultaVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         DocPicker.dataSource = self
         textField.delegate = self
         DocPicker.selectRow(0, inComponent: 0, animated: false)
-        printPickerData()
+        //printPickerData()
     }
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -79,12 +79,12 @@ class ConsultaVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             textField.keyboardType = UIKeyboardType.NumbersAndPunctuation
         }
         
-        printPickerData()
+        //printPickerData()
     }
     
-    func printPickerData() {
-        print(pickerData[0][DocPicker.selectedRowInComponent(0)])
-    }
+//    func printPickerData() {
+//        print(pickerData[0][DocPicker.selectedRowInComponent(0)])
+//    }
     
     @IBAction func queryButtonPressed(sender: AnyObject) {
         
@@ -184,6 +184,14 @@ class ConsultaVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                     conComparendosVC.comparendoExistente = comparendoExistente
                    
                 }
+                conComparendosVC.transitioningDelegate = self.transitionManager
+            }
+        }
+        
+        if segue.identifier == "SinComparendosVC" {
+            if let sinComparendosVC = segue.destinationViewController as? SinComparendosVC {
+                
+                sinComparendosVC.transitioningDelegate = self.transitionManager
             }
         }
     }

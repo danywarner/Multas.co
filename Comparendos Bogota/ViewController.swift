@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var deviceVersion = 0
     var onlineVersion = 0
     var deviceHasOldDataVersion = true
+    private var transitionManager = TransitionManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         let flurryKey = Keys.FlurryKey
@@ -60,7 +61,14 @@ class ViewController: UIViewController {
                     listVC.deviceHasOldDataVersion = deviceHasOldDataVersion
                 
                 
-                //listVC.transitioningDelegate = self.transitionManager
+                listVC.transitioningDelegate = self.transitionManager
+            }
+        }
+        
+        if segue.identifier == "ConsultaVC" {
+            if let consultaVC = segue.destinationViewController as? ConsultaVC {
+                
+                consultaVC.transitioningDelegate = self.transitionManager
             }
         }
     }
