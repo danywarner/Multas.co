@@ -122,12 +122,12 @@ class ConsultaVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
         
         urlString = "\(baseString)\(datosEnviados)&\(tipoDocumento)&\(numeroIdentificacion)&\(placaVeh)&\(tipoBusqueda)"
-        print(urlString)
+        //print(urlString)
         let url = NSURL(string: urlString)!
         Alamofire.request(.GET, url).responseString { (response) -> Void in
             let result = response.result
             if result.value.debugDescription.lowercaseString.rangeOfString("no se encontraron registros de comparendos") != nil{
-                print("no hay!")
+                //print("no hay!")
                 self.performSegueWithIdentifier("SinComparendosVC", sender: "")
             } else {
                 
@@ -144,7 +144,7 @@ class ConsultaVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                 self.newString = self.newString.substringWithRange(s2Range)
                 self.newString = self.cutString(self.newString)
                 
-                print(self.newString)
+                //print(self.newString)
                 
                 self._estado = "VIGENTE"
                 

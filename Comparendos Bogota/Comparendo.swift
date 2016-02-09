@@ -9,9 +9,9 @@
 import Foundation
 
 
-class Comparendo {
+class Comparendo: NSObject, NSCoding {
     private var _code: String!
-    private var _description: String!
+    private var _comparendoDescription: String!
     private var _SMDLVValue: Int!
     private var _towedAway: Bool?
     
@@ -24,16 +24,16 @@ class Comparendo {
         }
     }
     
-    var description: String! {
+    var comparendoDescription: String! {
         get {
-            if _description == nil {
-                _description = ""
+            if _comparendoDescription == nil {
+                _comparendoDescription = ""
             }
             
-            return _description
+            return _comparendoDescription
         }
         set {
-            _description = newValue
+            _comparendoDescription = newValue
         }
     }
     
@@ -55,15 +55,33 @@ class Comparendo {
         }
     }
     
+    override init() {
+        
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        self.init()
+        self._code = aDecoder.decodeObjectForKey("code") as? String
+        self._comparendoDescription = aDecoder.decodeObjectForKey("description") as? String
+        self._SMDLVValue = aDecoder.decodeObjectForKey("SMDLVValue") as? Int
+        self._towedAway = aDecoder.decodeObjectForKey("towedAway") as? Bool
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(self._code, forKey: "code")
+        aCoder.encodeObject(self._comparendoDescription, forKey: "description")
+        aCoder.encodeObject(self._SMDLVValue, forKey: "SMDLVValue")
+        aCoder.encodeObject(self._towedAway, forKey: "towedAway")
+    }
     
     init(code: String) {
         _code = code
     }
     
     init(code: String, dictionary: Dictionary<String, AnyObject>) {
-        self._code = code
         
-        _description = ""
+        _code = code
+        _comparendoDescription = ""
         _SMDLVValue = 0
         _towedAway = false
         
@@ -75,11 +93,9 @@ class Comparendo {
         
         if let description = dictionary["descripcion"] as? String {
             
-            _description = description
+            _comparendoDescription = description
         }
-        
-        
-        
+
         if let SMDLVValue = dictionary["valorSMDLV"] as? Int {
             
             _SMDLVValue = SMDLVValue

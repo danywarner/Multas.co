@@ -20,6 +20,7 @@ class DataService {
     private var _REF_SECCIONES = Firebase(url: "\(URL_BASE)/secciones")
     private var _REF_NOMBRE_SECCIONES = Firebase(url: "\(URL_BASE)/nombredesecciones")
     private var _REF_SALARIOS = Firebase(url: "\(URL_BASE)/salarios")
+    private var _REF_DATA_VERSION = Firebase(url: "\(URL_BASE)/dataVersion")
     
     
     var REF_BASE: Firebase {
@@ -36,6 +37,10 @@ class DataService {
     
     var REF_SALARIOS: Firebase {
         return _REF_SALARIOS
+    }
+    
+    var REF_DATA_VERSION: Firebase {
+        return _REF_DATA_VERSION
     }
     
     

@@ -33,7 +33,62 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         searchBar.returnKeyType = UIReturnKeyType.Done
         searchBar.enablesReturnKeyAutomatically = false
         //tableView.estimatedRowHeight = 60
+        loadData()
         
+        if comparendosPorSeccion.count == 0 {
+            downloadSectionNames()
+            downloadData()
+            downloadSalaries()
+        }
+        tableView.reloadData()
+        
+    }
+    
+    func loadData() {print("reading")
+        if let loadedArray = NSUserDefaults.standardUserDefaults().objectForKey("comparendos") as? NSData {
+            
+            if let comparendosArrayofArrays = NSKeyedUnarchiver.unarchiveObjectWithData(loadedArray) as? [[Comparendo]]{
+                self.comparendosPorSeccion = comparendosArrayofArrays
+            }
+        }
+        
+        if let loadedSections = NSUserDefaults.standardUserDefaults().objectForKey("secciones") as? NSData {
+            
+            if let sectionsArray = NSKeyedUnarchiver.unarchiveObjectWithData(loadedSections) as? [String]{
+                self.secciones = sectionsArray
+            }
+        }
+        
+        if let loadedSMDLV = NSUserDefaults.standardUserDefaults().valueForKey("SMDLV") as? Int {
+            SMDLV = loadedSMDLV
+        }
+        
+        if let loadedSMMLV = NSUserDefaults.standardUserDefaults().valueForKey("SMMLV") as? Int {
+            SMMLV = loadedSMMLV
+        }
+    }
+    
+    func storeData() {print("storing")
+        let comparendosAsData = NSKeyedArchiver.archivedDataWithRootObject(self.comparendosPorSeccion)
+    
+        NSUserDefaults.standardUserDefaults().setObject(comparendosAsData, forKey: "comparendos")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    func storeSectionNames() {
+        let sectionsAsData = NSKeyedArchiver.archivedDataWithRootObject(secciones)
+        
+        NSUserDefaults.standardUserDefaults().setObject(sectionsAsData, forKey: "secciones")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    func storeSalaries() {
+        NSUserDefaults.standardUserDefaults().setValue(SMDLV, forKey: "SMDLV")
+        NSUserDefaults.standardUserDefaults().setValue(SMMLV, forKey: "SMMLV")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    func downloadSectionNames() {
         DataService.ds.REF_NOMBRE_SECCIONES.observeEventType(.Value, withBlock: { snapshot in
             
             
@@ -45,8 +100,13 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
                     self.secciones.append(value as! String)
                 }
             }
+            self.storeSectionNames()
             self.tableView.reloadData()
         })
+    }
+    
+    
+    func downloadData() { print("downloading")
         
         
         DataService.ds.REF_SECCIONES.observeEventType(.Value, withBlock: { snapshot in
@@ -58,7 +118,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
                 for snap in snapshots {
                     self.comparendosTemp = []
                     if let comparendoDict = snap.value as? Dictionary<String, AnyObject> {
-                       // let key = snap.key
+                        // let key = snap.key
                         let code = comparendoDict["codigo"] as! String
                         let comparendosArray = comparendoDict["comparendos"] as! Array<Dictionary<String, AnyObject>>
                         for var k=0 ; k < comparendosArray.count ; k++ {
@@ -70,21 +130,21 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
                         
                     }
                 }
+                self.storeData()
             }
-             self.tableView.reloadData()
+            self.tableView.reloadData()
         })
         
+    }
+    
+    func downloadSalaries() {
         DataService.ds.REF_SALARIOS.observeEventType(.Value, withBlock: { snapshot in
             if let salariosDict = snapshot.value {
                 self.SMDLV = salariosDict["SMDLV"] as! Int
                 self.SMMLV = salariosDict["SMMLV"] as! Int
             }
+            self.storeSalaries()
         })
-        
-        
-        
-        
-
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {

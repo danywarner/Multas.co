@@ -47,7 +47,7 @@ class ComparendoDetailVC: UIViewController {
         super.viewWillAppear(true)
         comparendoTotal = Double(comparendo.SMDLVValue!*self.SMDLV)
         codeLabel.text = comparendo.code
-        descriptionLabel.text = comparendo.description
+        descriptionLabel.text = comparendo.comparendoDescription
         totalPriceLabel.text = "$\(comparendoTotal)"
         fiftyPercentLabel.text = "$\(comparendoTotal/2)"
         seventyfivePercentLabel.text = "$\(comparendoTotal*0.75)"

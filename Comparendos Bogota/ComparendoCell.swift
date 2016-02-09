@@ -17,7 +17,7 @@ class ComparendoCell: UITableViewCell {
     }
     
     func configureCell(comparendo: Comparendo) {
-        descLabel.text = comparendo.description
+        descLabel.text = comparendo.comparendoDescription
     }
     
 }
