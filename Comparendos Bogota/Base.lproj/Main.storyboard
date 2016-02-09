@@ -26,7 +26,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Valor comparendos 2016"/>
                                 <connections>
-                                    <segue destination="Qgf-El-xGa" kind="show" identifier="" id="xgi-b0-1VS"/>
+                                    <segue destination="Qgf-El-xGa" kind="show" identifier="ComparendoListVC" id="xgi-b0-1VS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9A-LL-mu9">

@@ -23,7 +23,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     var filteredArray = [[Comparendo]]()
     var SMDLV = 0
     var SMMLV = 0
-    
+    var deviceHasOldDataVersion = true
     
     override func viewDidLoad() {
         
@@ -35,7 +35,7 @@ class ComparendoListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         //tableView.estimatedRowHeight = 60
         loadData()
         
-        if comparendosPorSeccion.count == 0 {
+        if deviceHasOldDataVersion == true || comparendosPorSeccion.count == 0 {
             downloadSectionNames()
             downloadData()
             downloadSalaries()
